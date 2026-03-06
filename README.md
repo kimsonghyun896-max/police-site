@@ -1,1 +1,1 @@
-# police-site
+# fivem.police
