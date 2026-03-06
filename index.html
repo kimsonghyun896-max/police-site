@@ -1,64 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>경찰청 홈페이지</title>
+<meta charset="UTF-8">
+<title>FiveM 경찰청</title>
+
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial;
 margin:0;
+background:#f2f2f2;
 }
 
 header{
-background:#003478;
+background:#0a2a66;
 color:white;
 padding:15px;
 }
 
-nav a{
+nav{
+background:#123a8a;
+}
+
+nav ul{
+list-style:none;
+margin:0;
+padding:0;
+display:flex;
+}
+
+nav ul li{
+position:relative;
+}
+
+nav ul li a{
+display:block;
+padding:15px 20px;
 color:white;
-margin-right:15px;
 text-decoration:none;
 }
 
-.main{
+nav ul li:hover{
+background:#0a2a66;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+background:white;
+min-width:180px;
+}
+
+.dropdown a{
+color:black;
+}
+
+nav ul li:hover .dropdown{
+display:block;
+}
+
+.container{
 padding:30px;
 }
 
 .notice{
-background:#f3f3f3;
+background:white;
 padding:15px;
-margin-top:20px;
+margin-bottom:10px;
+border-radius:5px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<h2>경찰청</h2>
-
-<nav>
-<a href="#">홈</a>
-<a href="#">경찰청</a>
-<a href="#">청문감사실</a>
-<a href="#">인사행정국</a>
-<a href="#">기타사항</a>
-</nav>
+<h2>FiveM 경찰청 홈페이지</h2>
 </header>
 
-<div class="main">
+<nav>
+<ul>
 
-<h2>경찰청 홈페이지</h2>
+<li>
+<a href="#">경찰청</a>
+<div class="dropdown">
+<a href="#notice">공지사항</a>
+<a href="#org">조직도</a>
+<a href="#promo">홍보실</a>
+</div>
+</li>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Korean_Police_logo.svg" width="200">
+<li>
+<a href="#">청문감사실</a>
+<div class="dropdown">
+<a href="여기에민원폼링크">민원실</a>
+</div>
+</li>
+
+<li>
+<a href="#">인사행정국</a>
+<div class="dropdown">
+<a href="여기에지원서링크">경찰 지원서</a>
+<a href="여기에부서지원서">부서 지원서</a>
+</div>
+</li>
+
+<li>
+<a href="#maker">기타사항</a>
+</li>
+
+</ul>
+</nav>
+
+<div class="container">
+
+<h2 id="notice">공지사항</h2>
 
 <div class="notice">
-<h3>공지사항</h3>
-<p>경찰청 홈페이지에 오신 것을 환영합니다.</p>
-<p>신규 경찰 지원 모집 중</p>
+[공지] 경찰청 신규 채용 시작
 </div>
+
+<div class="notice">
+[공지] 조직 개편 안내
+</div>
+
+
+<h2 id="org">경찰 조직도</h2>
+
+<img src="조직도이미지주소" width="600">
+
+
+<h2 id="promo">경찰청 홍보 영상</h2>
+
+<iframe width="560" height="315"
+src="유튜브영상링크"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+
+<h2 id="maker">홈페이지 제작자</h2>
+
+<p>제작자 : YourName</p>
 
 </div>
 
